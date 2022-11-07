@@ -23,4 +23,12 @@ public class ShotResult {
     public Integer getScore() {
         return score;
     }
+
+    public boolean hasTwoSuccessShotsInRow() {
+        return shots.contains("++");
+    }
+
+    public Integer getShotCount() {
+        return shots.length();
+    }
 }

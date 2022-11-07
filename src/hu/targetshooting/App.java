@@ -21,6 +21,11 @@ public class App {
     }
 
     private void run() {
-        System.out.println("Céllövészet");
+        System.out.println("2. feladat");
+        System.out.println("Az egymást követően többszőr találó versenyzők: " +
+                service.getTwoSuccessShotIds());
+        System.out.println("3. feladat");
+        System.out.println("A legtöbb lövést leadó versenyző rajtszáma: " +
+                service.getLongestShotSequenceId());
     }
 }
