@@ -28,4 +28,19 @@ public class ShotService {
                 .map(ShotResult::getId)
                 .get();
     }
+
+    public String getSuccessShotIndexes(int id) {
+        return getShotResultById(id).getSuccessShotIndexes();
+    }
+
+    public int getScoreById(int id) {
+        return getShotResultById(id).getScore();
+    }
+
+    private ShotResult getShotResultById(int id) {
+        return results.stream()
+                .filter(i -> i.getId() == id)
+                .findAny()
+                .get();
+    }
 }
